@@ -20,7 +20,11 @@
 				
 				<div class="branding">
 
-					<h1 class="title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+					<h1 class="title">
+						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+							<img src="/wp-content/themes/elevate/assets/images/elevate-logo.svg" alt="elevate">
+						</a>
+					</h1>
 
 				</div>
 

@@ -19,7 +19,7 @@ class Menus
     {
         register_nav_menus( array(
             'primary' => __( 'Primary Menu', 'components-theme' ),
-            'utility' => __( 'Utility Menu', 'components-theme' ),
+            'mobile' => __( 'Mobile Menu', 'components-theme' ),
             'footer-menu' => __( 'Footer Menu', 'components-theme' ),
             'footer-legal' => __( 'Footer Legal', 'components-theme' ),
         ) );

@@ -32,15 +32,21 @@
 }
 
 header{
-	padding: 15px;
+	background: rgba(0,0,0,0.2);
+	padding: 43px 15px;
 	border-bottom: 1px solid $gray;
 }
 
 .branding{
 	float: left;
-
 	h1{
 		margin: 0;
+		img{
+			width: 147px;
+			@include lg{
+				width: 186px;
+			}
+		}
 	}
 }
 
