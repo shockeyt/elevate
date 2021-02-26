@@ -1,0 +1,25 @@
+/*
+Theme Name: Components Theme
+Theme URI: TBD
+Author: BLKDG
+Author URI: https://blkdg.com/
+Description: A components based theme. 
+Version: 0.1
+License: TBD
+License URI: TBD
+Text Domain: components-theme
+*/
+
+/**
+ * Required Wordpress Styles
+ */
+
+.sticky{}
+.bypostauthor{}
+.alignleft{}
+.alignright{}
+.aligncenter{}
+.wp-caption{}
+.wp-caption-text{}
+.gallery-caption{}
+.screen-reader-text{}

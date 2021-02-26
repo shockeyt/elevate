@@ -1,0 +1,21 @@
+/***
+ * 
+ * Button Styles
+ *  
+ ***/
+ 
+$button-bg: $brand-primary;
+$button-color: #fff;
+$button-hover-bg: #333;
+$button-hover-color:#fff;
+$button-disabled-bg:#eee;
+
+.btn{
+	// Parameters
+  	// $background (required), $border (required), $hover-background, $hover-border
+  	@include button-variant(theme-color('primary'), theme-color('secondary'));
+
+	&:disabled{
+		background: $button-disabled-bg;
+	}
+}
