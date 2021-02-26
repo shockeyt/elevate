@@ -1,4 +1,29 @@
 //(1) import font url
+@font-face {
+    font-family: 'Montserrat-Bold';
+    src: url('../fonts/Montserrat-Bold.woff2') format('woff2'), url('../fonts/Montserrat-Bold.woff') format('woff');
+}
+@font-face {
+    font-family: 'Montserrat-Light';
+    src: url('../fonts/Montserrat-Light.woff2') format('woff2'), url('../fonts/Montserrat-Light.woff') format('woff');
+}
+@font-face {
+    font-family: 'Montserrat-Medium';
+    src: url('../fonts/Montserrat-Medium.woff2') format('woff2'), url('../fonts/Montserrat-Medium.woff') format('woff');
+}
+@font-face {
+    font-family: 'Montserrat-Regular';
+    src: url('../fonts/Montserrat-Regular.woff2') format('woff2'), url('../fonts/Montserrat-Regular.woff') format('woff');
+}
+@font-face {
+    font-family: 'Montserrat-SemiBold';
+    src: url('../fonts/Montserrat-SemiBold.woff2') format('woff2'), url('../fonts/Montserrat-SemiBold.woff') format('woff');
+}
+$bold: 'Montserrat-Bold', sans-serif;
+$semibold: 'Montserrat-SemiBold', sans-serif;
+$medium: 'Montserrat-Medium', sans-serif;
+$regular: 'Montserrat-Regular', sans-serif;
+$light: 'Montserrat-Light', sans-serif;
 
 //(2) create font variables
 $font: sans-serif;
@@ -7,74 +32,85 @@ $font: sans-serif;
 
 
 h1{
-    font-family: $font;
-    font-weight: 700;
-    font-size: 38px;
-    line-height: 1.1;
+    font-family: $semibold;
+    font-size: 41px;
+    letter-spacing: 2px;
+    line-height: 1.2;
     @include md{
-        font-size: 68px;
-    }
-}
-h2{
-    font-family: $font;
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1;
-    @include md{
+        font-size: 55px;
         line-height: 1.16;
     }
 }
+h2{
+    font-family: $semibold;
+    font-size: 50px;
+    letter-spacing: 1.5px;
+    line-height: 1.36;
+}
 h3{
-    font-family: $font;
-    font-weight: 400;
-    font-size: 28px;
-    line-height: 1.7;
+    font-family: $semibold;
+    font-size: 36px;
+    letter-spacing: 3px;
+    line-height: 1.13;
     @include md{
         font-size: 45px;
+        line-height: 1.5;
     }
 }
 h4{ 
-    font-family: $font;
-    font-weight: 700;
-    font-size: 30px;
+    font-family: $semibold;
+    font-size: 28px;
+    letter-spacing: 1.5px;
     line-height: 1.8;
     @include md{
         font-size: 40px;
     }
 }
 h5{
-    font-family: $font;
-    font-weight: 700;
-    font-size: 28px;
-    line-height: 1.14;
+    font-family: $semibold;
+    font-size: 22px;
+    letter-spacing: 1.5px;
+    line-height: 1.8;
     @include md{
-        font-size: 36px;
+        font-size: 34px;
     }
 }
 h6{ 
-    font-family: $font;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.5;
+    font-family: $regular;
+    font-size: 20px;
+    letter-spacing: 1px;
+    line-height: 1.7;
     @include md{
+        font-family: $semibold;
+        font-size: 25px;
+        line-height: 1.4;
+    }
+    &.h7{
+        font-family: $semibold;
         font-size: 18px;
+        letter-spacing: 1.5px;
+        line-height: 1.7;
+        @include md{
+            font-size: 20px;
+        }
     }
 }
 p{
-    font-family: $font;
-    font-weight: 400;
-    font-size: 15px;
+    font-family: $regular;
+    font-size: 16px;
+    letter-spacing: 1.5px;
     line-height: 1.5;
     @include md{
-        font-size: 16px;
+        font-family: $medium;
+        font-size: 18px;
     }
 }
 *{
-    font-family: $font;
-    font-weight: 400;
+    font-family: $regular;
     font-size: 14px;
+    letter-spacing: 1.5px;
     line-height: 1.5;
     @include md{
-        font-size: 16px;
+        font-family: $medium;
     }
 }

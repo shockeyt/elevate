@@ -1,9 +1,12 @@
 // Colors
-$deep-blue: 		#0B0042;
-$gray: 				#eeeeee;
-$white:             #FFFFFF;
+$red: 		      #E84C5B;
+$light_green: 	#9FCFBB;
+$green:         #003E3D;
+$blue:          #194970;
+$gray:          #e6e6e6;
+$white:         #FFFFFF;
 
-$brand-primary:        teal;
+$brand-primary:   $green;
 
 // breakpoints
 $sm-width: 576px;
@@ -35,7 +38,11 @@ $fa-font-path: '../vendor/font-awesome/web-fonts-with-css/webfonts';
 $theme-colors: (
     "primary": $brand-primary,
     "gray": $gray,
-    "white": $white
+    "white": $white,
+    "red": $red,
+    "light-green": $light_green,
+    "green": $green,
+    "blue": $blue
 );
 //USAGE:
 //color class: text-primary
