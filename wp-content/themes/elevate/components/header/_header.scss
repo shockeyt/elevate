@@ -39,6 +39,14 @@ header{
     left: 0;
     width: 100%;
     z-index: 9999;
+	@include lg{
+		background: rgba(0,0,0,0);
+		padding: 28px 85px 34px;
+		transition: background 0.3s ease-in-out;
+		&.scroll{
+			background: rgba(0,0,0,0.2);
+		}
+	}
 }
 
 .branding{
@@ -217,24 +225,42 @@ header{
 
 	ul{
 		list-style: none;
-		margin: 12px 0px 0;
-
+		margin: 25px 0 0;
+		display: flex;
+		align-items: center;
 		li{
-			display: inline;
+			display: inline-block;
+			padding-bottom: 0;
+			padding-right: 20px;
 			&:before{
 				display: none;
 			}
 			a{
 				display: inline-block;
-				margin: 0 20px;
-				color: $gray;
-				transition: padding 0.3s;
-				@include md {
-					font-size: 14px;
-				}
-
+				margin: 0 10px 0 20px;
+				font-family: $semibold;
+				color: $white;
+				font-size: 18px;
+				letter-spacing: 0.45px;
+				transition: color 0.3s;
 			}
-
+			&:hover{
+				a{
+					color: $light_green;
+				}
+			}
+			&.btn{
+				padding: 9px 13px;
+				margin: 0 0 0 20px;
+			}
+			&.btn-white{
+				a{
+					color: #2E2E2E;
+					&:hover{
+						color: $white;
+					}
+				}
+			}
 		}
 	}
 

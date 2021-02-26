@@ -11,11 +11,20 @@ $button-hover-color:#fff;
 $button-disabled-bg:#eee;
 
 .btn{
-	// Parameters
-  	// $background (required), $border (required), $hover-background, $hover-border
-  	@include button-variant(theme-color('primary'), theme-color('secondary'));
-
-	&:disabled{
-		background: $button-disabled-bg;
+	padding: 9px 13px;
+	border: 0;
+	border-radius: 25px;
+	font-family: $semibold;
+	color: $white;
+	font-size: 18px;
+	letter-spacing: 0.45px;
+	transition: all 0.3s ease-in-out;
+}
+.btn-white{
+	background: #fff;
+	color: #2E2E2E;
+	&:hover{
+		background: $light_green;
+		color: $white;
 	}
 }
