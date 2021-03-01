@@ -1,0 +1,25 @@
+.icon-sections{
+    .icon-section{
+        @include lg{
+            display: flex;
+            align-items: flex-start;
+        }
+        img{
+            width: 53px;
+
+            @include md{
+                width: 83px;
+
+            }
+        }
+        .text{
+            h5{
+                line-height: 1.3;
+                font-size: 17px;
+                @include md{
+                    font-size: 34px;
+                }
+            }
+        }
+    }
+}
