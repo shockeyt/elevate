@@ -9,6 +9,17 @@ img {
 	height:auto;
 }
 
+hr{
+	border-top: 3px solid $red;
+	width: 70px;
+	margin: 15px auto;
+	@include md{
+		border-top: 4px solid $red;
+		width: 90px;
+		margin: 20px auto;
+	}
+}
+
 a{
 	transition: text-decoration 0.3s;
 }

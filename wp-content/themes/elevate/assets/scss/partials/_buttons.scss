@@ -28,3 +28,139 @@ $button-disabled-bg:#eee;
 		color: $white;
 	}
 }
+
+.btn-outline{
+	display: inline-block;
+	padding: 2px 25px;
+	border: 2px solid $red;
+	font-family: $medium;
+	color: $white;
+	font-size: 16px;
+	letter-spacing: 0.64px;
+	background: transparent;
+	transition: all 0.3s ease-in-out;
+	&:hover{
+		color: $white;
+		background: $red;
+	}
+	@include md{
+		padding: 5px 25px;
+		font-size: 20px;
+	}
+}
+
+.chevron-link{
+	color: $gray;
+	font-family: $semibold;
+    font-size: 14px;
+	letter-spacing: 0;
+	display: inline-block;
+	position: relative;
+	padding-right: 25px;
+	@include md{
+		font-size: 18px;
+	}
+	&:after{
+		content: url('/wp-content/themes/elevate/assets/images/icons/chevron-right-red.svg');
+		position: absolute;
+		top: 0;
+		right: 0;
+		transition: all 0.3s;
+		@include md{
+			top: 2px;
+		}
+	}
+	&:hover{
+		//color: $gray;
+		&:after{
+			right: -5px;
+		}
+	}
+}
+
+.chevron{
+	cursor: pointer;
+	background: rgba(#545454, 0.57);
+	border-radius: 50%;
+	position: relative;
+	width: 52px;
+	height: 52px;
+	transition: background 0.3s;
+	&:hover{
+		background: rgba(#545454, 1);
+	}
+	img{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+	}
+}
+
+.slick-dots{
+	position: absolute;
+	display: block;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	text-align: center;
+	bottom: 22px;
+    left: 50%;
+    transform: translateX(-50%);
+	li{
+		position: relative;
+		display: inline-block;
+		width: 10px;
+		height: 10px;
+		margin: 0 4px 0 0;
+		padding: 0 10px;;
+		cursor: pointer;
+		&:before{
+			display: none;
+		}
+		&.slick-active{
+			button{
+				&:before{
+					top: 0;
+					left: -1px;
+					font-size: 46px !important;
+					color: $white !important;
+					opacity: 1;
+				}
+			}
+		}
+		&:only-child{
+			display: none;
+		}
+		button{
+			font-size: 0;
+		    line-height: 0;
+		    display: block;
+		    width: 18px;
+		    height: 20px;
+		    padding: 5px;
+		    cursor: pointer;
+		    color: transparent;
+		    border: 0;
+		    outline: none;
+			background: transparent;
+			transition: all 0.3s;
+		    &:before{
+		    	font-family: 'slick';
+		    	font-size: 35px !important;
+		    	line-height: 20px;
+		    	position: absolute;
+		    	top: 0;
+		    	left: 0;
+		    	width: 10px;
+		    	height: 10px;
+		    	content: '•';
+		    	text-align: center;
+		    	color: $white !important;
+				opacity: 0.5;
+				-webkit-font-smoothing: antialiased;
+				transition: all 0.3s;
+		    }
+		}
+	}
+}

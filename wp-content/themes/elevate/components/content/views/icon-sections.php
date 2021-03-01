@@ -6,7 +6,7 @@
     //     $item->headline
     //     $item->text
 ?>
-<section class="icon-sections bg-green py-5 py-md-7">
+<section id="flex-section-<?php echo $DATA->row_index; ?>" class="icon-sections bg-green py-5 py-md-7">
     <div class="container">
         <div class="row">
             <div class="col-12 text-center text-lg-left">

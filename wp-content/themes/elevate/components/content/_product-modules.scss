@@ -1,0 +1,34 @@
+.product-modules{
+    .icon-headline{
+        @include md{
+            display: flex;
+            align-items: center;
+        }
+    }
+    .img-w-offset-bkgd{
+        .bkgd-img{
+            height: 278px;
+            top: -30px;
+            position: relative;
+            @include md{
+                height: 300px;
+                top: -42px;
+            }
+        }
+        .offset-bkgd{
+            position: absolute;
+            top: 60px;
+            left: 15px;
+            height: 290px;
+            width: 100%;
+            z-index: -1;
+            @include md{
+                height: 300px;
+            }
+            @include lg{
+                top: 40px;
+                left: 40px;
+            }
+        }
+    }
+}

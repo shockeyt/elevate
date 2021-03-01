@@ -41,6 +41,48 @@
 
         break;
 
+    case 'product_modules':
+        $prefix = 'product_modules_';
+        $section = new StdClass;
+        $section->row_index = get_row_index();
+        $section->title = get_sub_field($prefix.'section_title');
+        $section->subtitle = get_sub_field($prefix.'section_subtitle');
+        $section->link = get_sub_field($prefix.'view_all_link');
+        $section->img = get_sub_field($prefix.'featured_image');
+        $section->items = array();
+        if( have_rows($prefix.'modules') ):
+            while ( have_rows($prefix.'modules') ) : the_row();
+                $item = new StdClass;
+                $item->icon = get_sub_field('icon');
+                $item->headline = get_sub_field('headline');
+                $item->text = get_sub_field('description');
+                $item->link = get_sub_field('link');
+                array_push($section->items, $item);
+            endwhile;
+        endif;
+        Components\View::render('content', 'product-modules', $section);
+
+        break;
+
+    case 'carousel':
+        $prefix = 'carousel_';
+        $section = new StdClass;
+        $section->row_index = get_row_index();
+        $section->items = array();
+        if( have_rows($prefix.'carousel') ):
+            while ( have_rows($prefix.'carousel') ) : the_row();
+                $item = new StdClass;
+                $item->bkgd_img = get_sub_field('background_image');
+                $item->headline = get_sub_field('headline');
+                $item->subheadline = get_sub_field('subheadline');
+                $item->link = get_sub_field('link');
+                array_push($section->items, $item);
+            endwhile;
+        endif;
+        Components\View::render('content', 'carousel', $section);
+
+        break;
+
     default:
         // Default is Generic Text wysiwyg
         // $section = new StdClass;

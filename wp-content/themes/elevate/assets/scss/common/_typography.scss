@@ -25,11 +25,11 @@ $medium: 'Montserrat-Medium', sans-serif;
 $regular: 'Montserrat-Regular', sans-serif;
 $light: 'Montserrat-Light', sans-serif;
 
-//(2) create font variables
-$font: sans-serif;
-
-//(3) add to elements
-
+.bold{ font-family: $bold; }
+.semibold{ font-family: $semibold; }
+.medium{ font-family: $medium; }
+.regular{ font-family: $regular; }
+.light{ font-family: $light; }
 
 h1{
     font-family: $semibold;
@@ -37,7 +37,7 @@ h1{
     letter-spacing: 2px;
     line-height: 1.1;
     @include md{
-        font-size: 50px;
+        font-size: 55px;
         line-height: 1.16;
     }
 }
@@ -70,7 +70,7 @@ h5{
     font-family: $semibold;
     font-size: 22px;
     letter-spacing: 1.5px;
-    line-height: 1.8;
+    line-height: 1.2;
     @include md{
         font-size: 34px;
     }
@@ -89,7 +89,7 @@ h6{
         font-family: $semibold;
         font-size: 18px;
         letter-spacing: 1.5px;
-        line-height: 1.7;
+        line-height: 1.6;
         @include md{
             font-size: 20px;
         }
