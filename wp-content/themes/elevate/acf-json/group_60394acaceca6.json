@@ -46,6 +46,37 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_603c83ea1a29a": {
+                    "key": "layout_603c83ea1a29a",
+                    "name": "6040_frames_&_text",
+                    "label": "60\/40 Frames & Text",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_603c83ee1a29b",
+                            "label": "60\/40 Frames & Text",
+                            "name": "6040_frames_&_text",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_603c83846bd03"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 1
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "button_label": "Add Row",
@@ -70,5 +101,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1614367565
+    "modified": 1614578686
 }

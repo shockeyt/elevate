@@ -1,0 +1,17 @@
+.sixty-forty-frames-text{
+    .content{
+        h1,h2,h3,h4,h5{
+            color: $green;
+        }
+        h6{
+            font-family: $regular;
+            margin-top: 17px;
+        }
+        p{
+            margin-bottom: 0;
+            @include md{
+                line-height: 1.8;
+            }
+        }
+    }
+}
