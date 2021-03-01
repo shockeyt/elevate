@@ -254,10 +254,15 @@ header{
 				margin: 0 0 0 20px;
 			}
 			&.btn-white{
+				&:hover{
+					a{
+						color: $white !important;
+					}
+				}
 				a{
-					color: #2E2E2E;
+					color: #2E2E2E;	
 					&:hover{
-						color: $white;
+						color: $white !important;
 					}
 				}
 			}

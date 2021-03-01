@@ -1,15 +1,71 @@
 footer{
-	border-top: 1px solid $gray;
-
 	ul{
 		list-style: none;
 		text-align: center;
 		margin-bottom: 30px;
+		padding: 0;
+		@include lg{
+			display: flex;
+			flex-flow: row wrap;
+		}
 		li{
-			display: inline;
-			padding: 0 10px;
+			display: block;
+			padding: 0 0 13px;
+			text-align: left;
+			@include lg{
+				flex: 50%;
+				padding: 0 15px 13px;
+			}
 			&:before{
 				display: none;
+			}
+			a{
+				font-family: $semibold;
+				font-size: 20px;
+				letter-spacing: 0.5px;
+				line-height: 1.2;
+				color: #fff;
+				transition: color 0.3s;
+				&:hover{
+					color: $light_green;
+				}
+			}
+		}
+	}
+	ul.sub-menu{
+		margin-bottom: 0;
+		margin-top: 8px;
+		@include lg{
+			flex-direction: column;
+		}
+		li{
+			padding: 0 0 8px;
+			a{
+				font-family: $medium;
+				font-size: 16px;
+			}
+		}
+	}
+	.contact-info{
+		.email,
+		.social{
+			color: #fff;
+			@extend p;
+			img{
+				vertical-align: text-top;
+			}
+			i{
+				font-size: 22px;
+				color: $light_green;
+				margin-right: 17px;
+				display: inline-block;
+				vertical-align: text-bottom;
+			}
+		}
+		a{
+			transition: color 0.3s;
+			&:hover{
+				color: $light_green;
 			}
 		}
 	}
