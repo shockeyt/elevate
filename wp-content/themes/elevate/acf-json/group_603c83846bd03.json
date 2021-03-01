@@ -31,7 +31,7 @@
             "label": "iPhone Frame Image",
             "name": "iphone_frame_image",
             "type": "image",
-            "instructions": "",
+            "instructions": "Image dimensions need to be at least 181px wide and 390px tall.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -87,5 +87,5 @@
     "hide_on_screen": "",
     "active": false,
     "description": "",
-    "modified": 1614578653
+    "modified": 1614623579
 }
