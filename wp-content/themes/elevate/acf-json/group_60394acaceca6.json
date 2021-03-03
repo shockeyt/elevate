@@ -201,6 +201,37 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_603fbf3b937e0": {
+                    "key": "layout_603fbf3b937e0",
+                    "name": "process_section",
+                    "label": "Process Section",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_603fbf3e937e1",
+                            "label": "Process Section",
+                            "name": "process_section",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_603fbe902b98c"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 1
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "button_label": "Add Row",
@@ -225,5 +256,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1614749739
+    "modified": 1614790477
 }

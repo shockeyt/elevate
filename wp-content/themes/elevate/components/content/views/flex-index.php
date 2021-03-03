@@ -110,6 +110,29 @@
 
         break;
 
+    case 'process_section':
+        $prefix = 'process_section_';
+        $section = new StdClass;
+        $section->row_index = get_row_index();
+        $section->bkgd_img = get_sub_field($prefix.'background_image');
+        $section->title = get_sub_field($prefix.'section_title');
+        $section->description = get_sub_field($prefix.'section_description');
+        $section->items = array();
+        if( have_rows($prefix.'icon_modules') ):
+            while ( have_rows($prefix.'icon_modules') ) : the_row();
+                $item = new StdClass;
+                $item->icon = get_sub_field('icon');
+                $item->title = get_sub_field('title');
+                $item->text = get_sub_field('text');
+                array_push($section->items, $item);
+            endwhile;
+        endif;
+        $section->tagline = get_sub_field($prefix.'featured_tagline');
+        $section->feat_img = get_sub_field($prefix.'featured_image');
+        Components\View::render('content', 'process-section', $section);
+
+        break;   
+
     default:
         // Default is Generic Text wysiwyg
         // $section = new StdClass;

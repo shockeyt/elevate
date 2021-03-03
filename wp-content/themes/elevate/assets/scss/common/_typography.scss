@@ -107,6 +107,13 @@ p{
         font-family: $medium;
         font-size: 18px;
     }
+    &.small{
+        font-size: 14px;
+        @include md{
+            font-family: $regular;
+            font-size: 16px;
+        }
+    }
 }
 *{
     font-family: $regular;
