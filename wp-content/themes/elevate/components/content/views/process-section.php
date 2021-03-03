@@ -9,8 +9,9 @@
     //     $item->text
     // $DATA->tagline
     // $DATA->feat_img
+    // $DATA->offset
 ?>
-<section id="flex-section-<?php echo $DATA->row_index; ?>" class="process-section bg-bkgd-gray pb-lg-5">
+<section id="flex-section-<?php echo $DATA->row_index; ?>" class="process-section bg-bkgd-gray <?php echo($DATA->offset)? 'pb-lg-5' : ''; ?>">
     <div class="bkgd-img pt-5 pt-md-6 py-lg-6" style="background-image:url(<?php echo $DATA->bkgd_img['url']; ?>);">
         <div class="container position-relative z-index-1">
             <div class="row">

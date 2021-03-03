@@ -129,9 +129,55 @@
         endif;
         $section->tagline = get_sub_field($prefix.'featured_tagline');
         $section->feat_img = get_sub_field($prefix.'featured_image');
+        $section->offset = get_sub_field($prefix.'offset_featured_image');
         Components\View::render('content', 'process-section', $section);
 
-        break;   
+        break; 
+        
+    case 'form':
+        $prefix = 'form_';
+        $section = new StdClass;
+        $section->row_index = get_row_index();
+        $section->title = get_sub_field($prefix.'section_title');
+        $section->form = get_sub_field($prefix.'form_code');
+        Components\View::render('content', 'form', $section);    
+
+        break; 
+
+    case 'featured_posts':
+        $prefix = 'featured_posts_';
+        $section = new StdClass;
+        $section->row_index = get_row_index();
+        $section->title = get_sub_field($prefix.'section_title');
+        $section->link = get_sub_field($prefix.'view_all_link');
+        $section->feat_posts = array();
+        $post_type = get_sub_field($prefix.'chose_post_type');
+        $custom = get_sub_field($prefix.'custom_curate');
+        if ($custom) {
+            $custom_posts = get_sub_field($prefix.'custom_featured_posts');
+        } else {
+            global $post;
+            $args = array(
+                'post_type'              => $post_type,
+                'posts_per_page'         => 6,
+                'post_status'            => 'publish'
+            );
+            $query = new WP_Query( $args );
+            if( $query->have_posts() ) {
+                while ( $query->have_posts() ) {
+                    $query->the_post();
+                    $p = new StdClass;
+                    $p->title = get_the_title();
+                    $p->link = get_the_permalink();
+                    $p->image = get_the_post_thumbnail_url();
+                    array_push($section->feat_posts, $p);
+                }
+                wp_reset_postdata();
+            }
+        }
+        Components\View::render('content', 'featured-posts', $section);    
+
+        break; 
 
     default:
         // Default is Generic Text wysiwyg

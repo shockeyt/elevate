@@ -189,6 +189,25 @@
             "max_height": "",
             "max_size": "",
             "mime_types": ""
+        },
+        {
+            "key": "field_603fd3a34032a",
+            "label": "Offset Featured Image?",
+            "name": "offset_featured_image",
+            "type": "true_false",
+            "instructions": "Will overlap the featured image below the component",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
         }
     ],
     "location": [
@@ -208,5 +227,5 @@
     "hide_on_screen": "",
     "active": false,
     "description": "",
-    "modified": 1614790448
+    "modified": 1614795725
 }

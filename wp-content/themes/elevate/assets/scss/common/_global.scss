@@ -33,6 +33,20 @@ hr{
 
 a{
 	transition: text-decoration 0.3s;
+	&.basic-link{
+		font-family: $regular;
+    	font-size: 20px;
+		letter-spacing: 0;
+		text-decoration: underline;
+		color: #808080;
+		transition: color 0.3s;
+		@include md{
+			text-decoration: none;
+			&:hover{
+				color: $green;
+			}
+		}
+	}
 }
 a:hover{
 	text-decoration: none;
