@@ -83,6 +83,33 @@
 
         break;
 
+    case 'adapters_&_partnerships':
+        $prefix = 'adapters_&_partnerships_';
+        $section = new StdClass;
+        $section->row_index = get_row_index();
+        $section->adapter_content = get_sub_field($prefix.'certified_adapters_content');
+        $section->adapters = array();
+        if( have_rows($prefix.'adapter_companies') ):
+            while ( have_rows($prefix.'adapter_companies') ) : the_row();
+                $item = new StdClass;
+                $item->img = get_sub_field('company_logo');
+                array_push($section->adapters, $item);
+            endwhile;
+        endif;
+        $section->partner_content = get_sub_field($prefix.'partnership_content');
+        $section->partners = array();
+        if( have_rows($prefix.'partnership_companies') ):
+            while ( have_rows($prefix.'partnership_companies') ) : the_row();
+                $item = new StdClass;
+                $item->img = get_sub_field('company_logo');
+                array_push($section->partners, $item);
+            endwhile;
+        endif;
+        $section->see_all_link = get_sub_field($prefix.'see_all_link');
+        Components\View::render('content', 'adapters-partnerships', $section);
+
+        break;
+
     default:
         // Default is Generic Text wysiwyg
         // $section = new StdClass;

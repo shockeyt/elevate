@@ -18,6 +18,10 @@ hr{
 		width: 90px;
 		margin: 20px auto;
 	}
+	&.short{
+		border-top: 2px solid $red;
+		width: 42px;
+	}
 }
 
 a{
@@ -136,4 +140,10 @@ ol{
 	background-size: cover !important;
 	background-position: center !important;
 	background-repeat: no-repeat !important;
+}
+.position-center{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
 }

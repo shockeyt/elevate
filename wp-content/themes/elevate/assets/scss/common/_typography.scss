@@ -43,9 +43,12 @@ h1{
 }
 h2{
     font-family: $semibold;
-    font-size: 50px;
+    font-size: 35px;
     letter-spacing: 1.5px;
     line-height: 1.36;
+    @include md{
+        font-size: 50px;
+    }
 }
 h3{
     font-family: $semibold;

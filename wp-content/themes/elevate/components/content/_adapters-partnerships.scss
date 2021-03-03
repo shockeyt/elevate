@@ -1,0 +1,163 @@
+.adapters-partnerships{
+    .content{
+        h4{
+            line-height: 1.2;
+            color: $green;
+        }
+        hr{
+            @extend .short;
+            @include lg{
+                margin-left: 0;
+            }
+        }
+    }
+    .wheel-container{
+        overflow: hidden;
+        height: 230px;
+        position: relative;
+        @include md{
+            height: 600px;
+        }
+        @include lg{
+            height: auto;
+            overflow: initial;
+        }
+    }
+    .adapter-wheel{
+        position: relative;
+        display: inline-block;
+        -ms-transform: scale(0.3);
+        -webkit-transform: scale(0.3);
+        transform: scale(0.3);
+        left: -34%;
+        top: -47%;
+        @media screen and (min-width: 375px) {
+            left: -22%;
+        }
+        @include md{
+            -ms-transform: scale(0.7);
+            -webkit-transform: scale(0.7);
+            transform: scale(0.7);
+            left: 10%;
+            top: 15%;
+        }
+        @include lg{
+            -ms-transform: scale(1);
+            -webkit-transform: scale(1);
+            transform: scale(1);
+            left: auto;
+            top: auto;
+        }
+        .wheel{
+            position: relative;
+            background: $white;
+            width: 448px;
+            height: 448px;
+            border-radius: 50%;
+            box-shadow: 0 2px 74px 6px rgba(#000000, .09);
+            img{
+                position: absolute;
+                top: 47%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+            }
+        }
+        .logo{
+            position: absolute;
+            width: 165px;
+            &.logo-1{
+                top: -148px;
+                left: 128px;
+            }
+            &.logo-2{
+                top: -129px;
+                left: 364px;
+            }
+            &.logo-3{
+                right: -206px;
+                top: 40px;
+            }
+            &.logo-4{
+                top: 50%;
+                transform: translateY(-50%);
+                right: -244px;
+            }
+            &.logo-5{
+                right: -209px;
+                top: 344px;
+            }
+            &.logo-6{
+                bottom: -70px;
+                left: 383px;
+            }
+            &.logo-7{
+                bottom: -111px;
+                left: 146px;
+            }
+            &.logo-8{
+                bottom: -80px;
+                left: -47px;
+            }
+        }
+        .spoke{
+            width: 2px;
+            height: 53px;
+            background: #979797;
+            position: absolute;
+            
+            -webkit-filter: blur(2px);
+            filter: blur(2px);
+            opacity: 0.4;
+            &.spoke-1{
+                top: -53px;
+                left: 221px;
+            }
+            &.spoke-2{
+                top: -19px;
+                left: 353px;
+                -webkit-transform: rotate(31deg);
+                -ms-transform: rotate(31deg);
+                transform: rotate(31deg);
+            }
+            &.spoke-3{
+                right: 7px;
+                top: 69px;
+                -webkit-transform: rotate(63deg);
+                -ms-transform: rotate(63deg);
+                transform: rotate(63deg);
+            }
+            &.spoke-4{
+                top: 50%;
+                -webkit-transform: translateY(-50%) rotate(90deg);
+                -ms-transform: translateY(-50%) rotate(90deg);
+                transform: translateY(-50%) rotate(90deg);
+                right: -28px;
+            }
+            &.spoke-5{
+                right: 7px;
+                top: 325px;
+                -webkit-transform: rotate(-63deg);
+                -ms-transform: rotate(-63deg);
+                transform: rotate(-63deg);
+            }
+            &.spoke-6{
+                bottom: -19px;
+                left: 353px;
+                -webkit-transform: rotate(-31deg);
+                -ms-transform: rotate(-31deg);
+                transform: rotate(-31deg);
+            }
+            &.spoke-7{
+                bottom: -53px;
+                left: 221px;
+            }
+            &.spoke-8{
+                bottom: -20px;
+                left: 97px;
+                -webkit-transform: rotate(30deg);
+                -ms-transform: rotate(30deg);
+                transform: rotate(30deg);
+            }
+        }
+    }
+}

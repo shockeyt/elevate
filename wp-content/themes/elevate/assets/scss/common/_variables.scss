@@ -3,6 +3,7 @@ $red: 		      #E84C5B;
 $light_green: 	#9FCFBB;
 $green:         #003E3D;
 $blue:          #194970;
+$bg_gray:       #f5f6f6;
 $light_gray:    #e6e6e6;
 $gray:          #6B6B6B;
 $white:         #FFFFFF;
@@ -38,6 +39,7 @@ $fa-font-path: '../vendor/font-awesome/web-fonts-with-css/webfonts';
 //add variables to bootstrap:
 $theme-colors: (
     "primary": $brand-primary,
+    "bkgd-gray": $bg_gray,
     "light-gray": $light_gray,
     "gray": $gray,
     "white": $white,
