@@ -30,3 +30,179 @@ select{
 	// 	padding: 17px 13px;
 	// }
 }
+
+.gform_wrapper li.gfield.gfield_error{
+	border: 0 !important;
+	padding: 0 !important;
+	background-color: $bg_gray !important;
+	margin-bottom: 17px !important;
+}
+.gform_wrapper{
+	div.validation_error{
+		display: none;
+	}
+	.gfield{
+		margin-top: 0 !important;
+		margin-bottom: 15px !important;
+		@include lg{
+			margin-bottom: 28px !important;
+		}
+		// &.gfield_error{
+		// 	background-color: $bg_gray !important;
+		// 	margin-bottom: 17px !important;
+		// }
+		label{
+			font-family: $medium;
+        	font-size: 21px !important;
+			color: $green;
+			margin-bottom: 0 !important;
+			@include lg{
+				font-size: 30px !important;
+			}
+		}
+		input[type="text"]{
+			width: 100% !important;
+			border: 0 !important;
+			padding: 11px 15px !important;
+			border-radius: 6px !important;
+			background: #fff;
+			font-family: $regular;
+        	font-size: 16px;
+
+			&::placeholder{
+				color: #515252;
+			}
+		}
+		.gfield_checkbox{
+			input{
+				margin-top: -2px !important;
+    			margin-right: 5px !important;
+			}
+			label{
+				font-family: $medium;
+        		font-size: 16px !important;
+				color: #292A2A;
+				@include lg{
+					font-size: 21px !important;
+				}
+			}
+		}
+		.validation_message{
+			position: absolute;
+			bottom: -4px;
+			left: 2px;
+			font-size: 8px;
+			@include lg{
+				bottom: -17px;
+    			font-size: 10px;
+			}
+		}
+		select{
+			border: 1px solid #D9D9D9 !important;
+			padding: 11px 15px !important;
+			border-radius: 0 !important;
+			height: 45px;
+			width: 100% !important;
+			margin-top: 12px;
+		}
+		textarea{
+			margin-top: 0;
+			border: 0 !important;
+			padding: 11px 15px !important;
+			border-radius: 6px !important;
+		}
+		&.half-left{
+			@include md{
+				float: left;
+				width: 49% !important;
+				clear: none;
+			}
+		}
+		&.half-right{
+			@include md{
+				float: right;
+				width: 49% !important;
+				clear: none;
+			}
+		}
+	}
+	.gfield.tooltip-description{
+		position: relative;
+		label.gfield_label{
+			position: relative;
+			padding-right: 27px;
+			cursor: pointer;
+			&:after{
+				content: url('/wp-content/themes/elevate/assets/images/icons/question-mark.svg');
+				position: absolute;
+				top: -13px;
+				right: 0;
+				opacity: 0.5;
+				transition: opacity 0.3s;
+			}
+			&:hover{
+				&:after{
+					opacity: 1;
+				}
+			}
+		}
+		.gfield_description{
+			//display: none;
+			position: absolute;
+			width: 287px;
+			z-index: 1;
+			line-height: 1.5;
+			padding: 10px !important;
+			border: 1px solid $green;
+			box-shadow: 0 5px 8px rgba(0,0,0,0.4);
+			background: #fff;
+			border-radius: 6px !important;
+			opacity: 0;
+			transition: opacity 0.3s;
+			&.reveal{
+				opacity: 1;
+			}
+			@include md{
+				width: 245px;
+    			left: 31%;
+			}
+			@include lg{
+				width: 300px;
+				left: 171px;
+			}
+			&:after{
+				content: '';
+				position: absolute;
+				bottom: -10px;
+				right: 14%;
+				width: 0;
+				height: 0;
+				border-style: solid;
+				border-width: 10px 7.5px 0 7.5px;
+				border-color: #003e3d transparent transparent transparent;
+				@include md{
+					right: auto;
+					left: 50%;
+					transform: translateX(-50%);
+				}
+			}
+		}
+	}
+}
+.gform_footer{
+	text-align: center;
+	padding: 7px 0 0 !important;
+	margin: 0 !important;
+	@include md{
+		padding: 15px 0 0!important;
+	}
+	input[type="submit"]{
+		@extend .btn;
+		@extend .btn-green;
+		display: inline-block;
+		width: 150px !important;
+	}
+}
+.gform_confirmation_message{
+	@extend p;
+}

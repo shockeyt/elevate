@@ -28,6 +28,14 @@ $button-disabled-bg:#eee;
 		color: $white;
 	}
 }
+.btn-green{
+	background: $green;
+	color: $white;
+	&:hover{
+		background: $light_green;
+		color: $white;
+	}
+}
 
 .btn-outline{
 	display: inline-block;

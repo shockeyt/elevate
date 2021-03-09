@@ -3,9 +3,35 @@
     $(document).on('ready', function(){
         carouselSlider();
         featuredPosts();
+        formToolTips();
     });
   
     //functions
+    function formToolTips(){
+        var tt = $('.gfield.tooltip-description > .gfield_description').outerHeight() + 15;
+        console.log(tt);
+        if ( $( window ).width() < 992 ) {
+            var calc = '-' + (tt + 5) + 'px';
+        } else {
+            var calc = '-' + (tt ) + 'px';
+        }
+        console.log(calc);
+        $('.gfield.tooltip-description > .gfield_description').css('top', calc);
+
+        if ( $( window ).width() < 992 ) {
+            $('.gfield.tooltip-description > .gfield_label').on('click', function(){
+                $('.gfield.tooltip-description > .gfield_description').toggleClass('reveal');
+            });
+        } else {
+            $('.gfield.tooltip-description > .gfield_label').mouseenter(function(){
+                $('.gfield.tooltip-description > .gfield_description').addClass('reveal');
+            });
+            $('.gfield.tooltip-description > .gfield_label').mouseleave(function(){
+                $('.gfield.tooltip-description > .gfield_description').removeClass('reveal');
+            });
+        }
+    }
+
     function featuredPosts(){
         $('.feat-posts-slider').slick({
             slidesToShow: 1,
