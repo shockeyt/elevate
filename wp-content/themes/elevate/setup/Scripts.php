@@ -46,6 +46,15 @@ class Scripts
         // Slick Carousel
         wp_enqueue_script( 'slick', get_stylesheet_directory_uri() . '/assets/vendor/slick-carousel/slick/slick.min.js', array('jquery'), '1.8.1', true );
 
+        //Rellax
+        wp_enqueue_script( 'rellax', get_stylesheet_directory_uri() . '/assets/vendor/rellax/rellax.min.js', array('jquery'), '3.3.6', true );
+
+        //Scrollmagic
+        //wp_enqueue_script( 'scrollmagic', 'https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js', array(), '2.0.8', false );
+
+        //TweenMax
+        //wp_enqueue_script( 'tweenmax', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js', array(), '3.6.0', false );
+
         // Scripts
         wp_enqueue_script( 'scripts', get_stylesheet_directory_uri() . '/assets/js/scripts.min.js?v='.filemtime(get_stylesheet_directory() . '/assets/js/scripts.min.js'), array('jquery', 'bootstrap'), '0.0.1', true );
 

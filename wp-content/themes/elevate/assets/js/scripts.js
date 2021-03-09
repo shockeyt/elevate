@@ -2,6 +2,14 @@
 
 	$(document).on('ready',function(){
     
+        if ($('.rellax').length > 0) {
+            var rellax = new Rellax('.rellax');
+        }
+        if ($('.d-lg-rellax').length > 0) {
+            if ($(window).width() > 991) {
+                var desktop_rellax = new Rellax('.d-lg-rellax');
+            }
+        } 
 
 	});
 

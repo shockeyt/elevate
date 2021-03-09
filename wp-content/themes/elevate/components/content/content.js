@@ -5,17 +5,30 @@
         featuredPosts();
         formToolTips();
     });
+
+    $(window).load(function(){
+
+		heroPhoneAnimations();
+        
+	});
   
     //functions
+    function heroPhoneAnimations(){
+        if ( $( window ).width() > 991 ) {
+            $('.headline-section').addClass('move-left');
+            $('.phone-section').addClass('move-up');  
+        } 
+    }
+
     function formToolTips(){
         var tt = $('.gfield.tooltip-description > .gfield_description').outerHeight() + 15;
-        console.log(tt);
+        //console.log(tt);
         if ( $( window ).width() < 992 ) {
             var calc = '-' + (tt + 5) + 'px';
         } else {
             var calc = '-' + (tt ) + 'px';
         }
-        console.log(calc);
+        //console.log(calc);
         $('.gfield.tooltip-description > .gfield_description').css('top', calc);
 
         if ( $( window ).width() < 992 ) {

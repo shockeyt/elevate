@@ -26,7 +26,8 @@
                 height: 300px;
             }
             @include lg{
-                top: 40px;
+                //top: 40px;
+                top: -43%;
                 left: 40px;
             }
         }

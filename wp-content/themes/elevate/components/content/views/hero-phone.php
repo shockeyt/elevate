@@ -5,7 +5,7 @@
     //$DATA->subheadline
     //$DATA->phone_img
 ?>
-<section id="flex-section-<?php echo $DATA->row_index; ?>" class="hero-phone position-relative bkgd-img" style="background-image:url(<?php echo $DATA->bkgd_img['url']; ?>);">
+<section id="flex-section-<?php echo $DATA->row_index; ?>" class="hero-phone position-relative overflow-hidden bkgd-img" style="background-image:url(<?php echo $DATA->bkgd_img['url']; ?>);">
     <div class="headline-section pt-4 pb-5 px-3 p-md-5 text-center text-md-left">
         <h1 class="text-white mb-3"><?php echo($DATA->headline)? $DATA->headline : get_the_title(); ?></h1>
         <?php if (!empty($DATA->subheadline)): ?>

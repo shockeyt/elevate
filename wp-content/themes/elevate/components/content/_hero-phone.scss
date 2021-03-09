@@ -47,15 +47,27 @@
         @include lg{
             top: 55%;
             width: 70%;
-            left: 30%;
+            left: 40%;
+            opacity: 0;
+            transition: all 1s;
+            &.move-left{
+                left: 30%;
+                opacity: 1;
+            }
         }
         @include xl{
             width: 60%;
-            left: 40%;
+            left: 50%;
+            &.move-left{
+                left: 40%;
+            }
         }
         @media screen and (min-width: 1600px){
             width: 55%;
-            left: 45%;
+            left: 55%;
+            &.move-left{
+                left: 45%;
+            }
         }
     }
     .phone-section{
@@ -72,6 +84,13 @@
         }
         @include lg{
             left: 87%;
+            opacity: 0;
+            transition: all 1s;
+            top: 227px;
+            &.move-up{
+                opacity: 1;
+                top: 177px;
+            }
         }
     }
 }
