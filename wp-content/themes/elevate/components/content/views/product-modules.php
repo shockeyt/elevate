@@ -24,10 +24,10 @@
         </div>
         <div class="row">
             <?php foreach ($DATA->items as $item) { ?>
-            <div class="anim-up col-12 col-md-6 mb-4 mb-md-5">
+            <div class="anim-up col-12 col-md-6 mb-5">
                 <div class="product-section text-center text-md-left">
                     <div class="icon-headline mb-md-4">
-                        <img class="mx-auto ml-md-0 mr-md-3" src="<?php echo $item->icon['url']; ?>" alt="<?php echo $item->icon['alt']; ?>">
+                        <img class="mx-auto mb-3 mb-md-0 ml-md-0 mr-md-3" src="<?php echo $item->icon['url']; ?>" alt="<?php echo $item->icon['alt']; ?>">
                         <h5 class="mb-md-0"><?php echo $item->headline; ?></h5>
                     </div>
                     <p><?php echo $item->text; ?></p>

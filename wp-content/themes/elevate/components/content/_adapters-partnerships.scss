@@ -15,6 +15,9 @@
         overflow: hidden;
         height: 230px;
         position: relative;
+        @media screen and (min-width: 375px) {
+            height: 300px;
+        }
         @include md{
             height: 600px;
         }
@@ -33,6 +36,13 @@
         top: -47%;
         @media screen and (min-width: 375px) {
             left: -22%;
+            -ms-transform: scale(0.4);
+            -webkit-transform: scale(0.4);
+            transform: scale(0.4);
+            top: -22%;
+        }
+        @media screen and (min-width: 414px) {
+            left: -18%;
         }
         @include md{
             -ms-transform: scale(0.7);

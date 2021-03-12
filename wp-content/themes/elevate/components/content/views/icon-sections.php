@@ -13,7 +13,7 @@
                 <h1 class="text-white mb-5 mb-lg-6"><?php echo $DATA->title; ?></h1>
             </div>
             <?php foreach ($DATA->items as $item) { ?>
-            <div class="col-6 anim-up">
+            <div class="col-12 col-md-6 anim-up">
                 <div class="icon-section mb-4 pr-lg-2">
                     <img class="mb-2 mx-auto mr-lg-4" src="<?php echo $item->icon['url']; ?>" alt="<?php echo $item->icon['alt']; ?>">
                     <div class="text text-center text-lg-left">

@@ -33,7 +33,7 @@
 
 header{
 	background: rgba(0,0,0,0.2);
-	padding: 43px 10px;
+	padding: 30px 10px 34px;
 	position: fixed;
     top: 0;
     left: 0;
@@ -261,6 +261,7 @@ header{
 				}
 				a{
 					color: #2E2E2E;	
+					margin: 0 17px;
 					&:hover{
 						color: $white !important;
 					}

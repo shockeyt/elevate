@@ -69,6 +69,21 @@
                 left: 45%;
             }
         }
+        &.no-phone{
+            top: 50%;
+            transform: translateY(-50%);
+            @include md{
+                left: auto;
+                right: 0;
+                width: 76%;
+                h1,h6{
+                    max-width: 100%;
+                }
+            }
+            @include lg{
+                width: auto;
+            }
+        }
     }
     .phone-section{
         width: 215px;
@@ -93,4 +108,18 @@
             }
         }
     }
+}
+.demo-button-area{
+    .demo-btn{
+		height: 52px;
+		width: 100%;
+		display: block;
+		background: $light_green;
+		color: $green;
+		font-family: $semibold;
+        font-size: 19px;
+		letter-spacing: 0.47px;
+		padding: 13px;
+    	text-align: center;
+	}
 }
