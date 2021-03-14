@@ -6,22 +6,16 @@
 get_header();
 
 	while ( have_posts() ) : the_post(); ?>
-	
-		<?php
-		/**
-		 * This is an example of how to use the component system
-		 * Instead of StdClass, you can create your own classes to organize you structure
-		 * @var StdClass
-		 */
-		
-		// $object = new StdClass;
-		// $object->foo = 'bar';
-		
-		// Components\View::render('component-name', 'sub-component', $object);
-		
-		?>
-
-		<?php the_content(); ?>
+		<section class="green-bar bg-green py-6 pt-lg-6 pb-lg-7"></section>
+		<section class="default-page py-6 py-md-7">
+			<div class="container">
+				<div class="row">
+					<div class="col-12 offset-md-1 col-md-10">
+						<?php the_content(); ?>
+					</div>
+				</div>
+			</div>
+		</section>
 
 	<?php endwhile;
 
