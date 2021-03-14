@@ -72,41 +72,94 @@
                 transform: translate(-50%,-50%);
             }
         }
-        .logo{
+        .logo.w-link{
+            width: 165px;
+        }
+        .link,
+        .logo.wo-link{
             position: absolute;
             width: 165px;
-            &.logo-1{
+            &.link-1{
                 top: -148px;
                 left: 128px;
             }
-            &.logo-2{
+            &.logo-1{
+                &.wo-link{
+                    top: -148px;
+                    left: 128px;
+                }
+            }
+            &.link-2{
                 top: -129px;
                 left: 364px;
             }
-            &.logo-3{
+            &.logo-2{
+                &.wo-link{
+                    top: -129px;
+                    left: 364px;
+                }
+            }
+            &.link-3{
                 right: -206px;
                 top: 40px;
             }
-            &.logo-4{
+            &.logo-3{
+                &.wo-link{
+                    right: -206px;
+                    top: 40px;
+                }
+            }
+            &.link-4{
                 top: 50%;
                 transform: translateY(-50%);
                 right: -244px;
             }
-            &.logo-5{
+            &.logo-4{
+                &.wo-link{
+                    top: 50%;
+                    transform: translateY(-50%);
+                    right: -244px;
+                }
+            }
+            &.link-5{
                 right: -209px;
                 top: 344px;
             }
-            &.logo-6{
+            &.logo-5{
+                &.wo-link{
+                    right: -209px;
+                    top: 344px;
+                }
+            }
+            &.link-6{
                 bottom: -70px;
                 left: 383px;
             }
-            &.logo-7{
+            &.logo-6{
+                &.wo-link{
+                    bottom: -70px;
+                    left: 383px;
+                }
+            }
+            &.link-7{
                 bottom: -111px;
                 left: 146px;
             }
-            &.logo-8{
+            &.logo-7{
+                &.wo-link{
+                    bottom: -111px;
+                    left: 146px;
+                }
+            }
+            &.link-8{
                 bottom: -80px;
                 left: -47px;
+            }
+            &.logo-8{
+                &.wo-link{
+                    bottom: -80px;
+                    left: -47px;
+                }
             }
         }
         .spoke{

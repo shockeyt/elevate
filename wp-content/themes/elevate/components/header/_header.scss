@@ -39,12 +39,17 @@ header{
     left: 0;
     width: 100%;
     z-index: 9999;
+	transition: padding 0.3s ease-in-out;
+	&.scroll{
+		padding: 15px 10px 17px;
+	}
 	@include lg{
 		background: rgba(0,0,0,0);
 		padding: 28px 85px 34px;
 		transition: background 0.3s ease-in-out;
 		&.scroll{
 			background: rgba(0,0,0,0.2);
+			padding: 28px 85px 34px;
 		}
 	}
 }

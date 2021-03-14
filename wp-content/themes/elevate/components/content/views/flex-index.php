@@ -93,6 +93,7 @@
             while ( have_rows($prefix.'adapter_companies') ) : the_row();
                 $item = new StdClass;
                 $item->img = get_sub_field('company_logo');
+                $item->link = get_sub_field('company_link');
                 array_push($section->adapters, $item);
             endwhile;
         endif;

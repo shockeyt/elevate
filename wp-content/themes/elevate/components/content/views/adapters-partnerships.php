@@ -3,6 +3,7 @@
     // $DATA->adapter_content
     // $DATA->adapters
     //         $item->img
+    //         $item->link
     // $DATA->partner_content
     // $DATA->partners
     //         $item->img
@@ -34,7 +35,13 @@
                             if (!empty($logo->img)){
                                 $l++;                      
                         ?>    
-                            <img src="<?php echo $logo->img['url']; ?>" alt="<?php echo $logo->img['alt']; ?>" class="logo logo-<?php echo $l; ?>">
+                            <?php if (!empty($logo->link)): ?>
+                            <a class="link link-<?php echo $l; ?>" href="<?php echo $logo->link['url']; ?>" target="<?php echo $logo->link['target'] ? $logo->link['target'] : '_self'; ?>" class="d-block">
+                            <?php endif; ?>
+                                <img src="<?php echo $logo->img['url']; ?>" alt="<?php echo $logo->img['alt']; ?>" class="logo <?php echo(!empty($logo->link))? 'w-link' : 'wo-link'; ?> logo-<?php echo $l; ?>">
+                            <?php if (!empty($logo->link)): ?>
+                            </a>
+                            <?php endif; ?>    
                         <?php 
                             }
                         } ?>
