@@ -20,11 +20,16 @@
             scrollTop: $($.attr(this, 'href')).offset().top
         }, 1000);
 
+        //close mobile menu if menu anchor link
         if ( $( window ).width() < 992 ) {
-            $('#mobile-menu').toggleClass('open');
-            $('.mobile-menu').fadeToggle();
+            if ( $(this).parent().hasClass('menu-item') || $(this).parent().hasClass('mobile-menu')) {
+                $('#mobile-menu').toggleClass('open');
+                $('.mobile-menu').fadeToggle();                
+            }
         }    
     });
+
+
 
 	$(window).load(function(){
 
