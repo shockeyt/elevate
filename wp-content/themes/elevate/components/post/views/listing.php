@@ -1,25 +1,25 @@
-<main class="container">
-	<div class="row">
-		<div class="col-sm-8">
+<section class="post-listings py-4 py-md-7">
+	<div class="container">
+		<!-- filter -->
 
+
+		<div class="row post-listings-row">
+			
 			<?php while ( have_posts() ) : the_post();
 
-				Components\View::render('post', get_post_format() );
+				Components\View::render('post', 'item' );
 
 			endwhile; ?>
-
-
-			<?php // Link Pages
-			wp_link_pages();
-			
-			// Previous/next page navigation.
-			the_posts_pagination(); ?>
-
+		
 		</div>
-		<div class="col-sm-4">
-
-			<?php Components\View::render('widget', 'sidebar-1'); ?>
-
+		<div class="row post-listings-pagination">
+			<div class="col-12">
+				<?php // Link Pages
+				wp_link_pages();
+				
+				// Previous/next page navigation.
+				the_posts_pagination(); ?>
+			</div>
 		</div>
 	</div>
-</main>
+</section>

@@ -63,6 +63,14 @@ $button-disabled-bg:#eee;
 	}
 }
 
+.btn-outline-green{
+	border: 1px solid $light_green;
+	color: $black;
+	font-family: $regular;
+	font-size: 15px;
+	padding: 4px 20px;
+}
+
 .chevron-link{
 	color: $gray;
 	font-family: $semibold;
