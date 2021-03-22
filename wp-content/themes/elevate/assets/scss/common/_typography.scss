@@ -115,6 +115,12 @@ p{
         }
     }
 }
+a{
+    font-size: 16px;
+    @include md{
+        font-size: 18px;
+    }
+}
 *{
     font-family: $regular;
     font-size: 14px;
