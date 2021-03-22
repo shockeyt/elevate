@@ -103,22 +103,22 @@ p{
     font-size: 16px;
     letter-spacing: 1.5px;
     line-height: 1.5;
-    @include md{
-        font-family: $medium;
-        font-size: 18px;
-    }
     &.small{
         font-size: 14px;
         @include md{
             font-family: $regular;
-            font-size: 16px;
+            font-size: 15px;
         }
     }
 }
 a{
     font-size: 16px;
+    color: $light_green;
+    transition: color 0.3s;
     @include md{
-        font-size: 18px;
+        &:hover{
+            color: $green;
+        }
     }
 }
 *{

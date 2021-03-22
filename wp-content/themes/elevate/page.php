@@ -19,4 +19,10 @@ get_header();
 
 	<?php endwhile;
 
+	if( have_rows('flex_components') ) {
+		while ( have_rows('flex_components') ) : the_row();
+			Components\View::render('content', 'flex-index');
+		endwhile;
+	};
+
 get_footer(); ?>
