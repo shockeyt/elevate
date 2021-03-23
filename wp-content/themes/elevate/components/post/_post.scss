@@ -1,3 +1,50 @@
+.post-filter{
+    .filters-area{
+        @include md{
+            display: flex;
+            justify-content: center;
+        }
+    }
+}
+.filter{
+    select,
+    input{
+        font-family: $regular;
+        font-size: 16px;
+        letter-spacing: 0.35px;
+        background: $white;
+        border: 1px solid #9E9E9E;
+        border-radius: 19px;
+        padding: 7px 20px;
+        width: 100%;
+        @include md{
+            width: 300px;
+        }
+        @include lg{
+            width: 340px;
+        }
+    }
+    select{
+        -webkit-appearance: none;
+        outline: none;
+        background-image: url(/wp-content/themes/elevate/assets/images/icons/chevron-down-green.svg);
+        background-repeat: no-repeat;
+        background-position: right 20px center;
+    }
+}
+.search-field{
+    position: relative;
+    &:after{
+        content: url('/wp-content/themes/elevate/assets/images/icons/search.svg');
+        position: absolute;
+        top: 57%;
+        right: 16px;
+        transform: translateY(-50%);
+    }
+    #search-filter{
+        padding: 7px 40px 7px 20px;
+    }
+}
 .featured-item{
     .bkgd-img{
         height: 373px;

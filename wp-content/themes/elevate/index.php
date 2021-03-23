@@ -13,6 +13,7 @@ get_header();
 
 	Components\View::render('post', 'filter');
 
+	$section = new StdClass;
 	global $post;
 	$args = array(
 		'post_type' => 'post',
@@ -24,6 +25,7 @@ get_header();
 		while ( $query->have_posts() ) :
 			$query->the_post();
 			$featured = new StdClass;
+			$section->f_id = get_the_ID();
 			$featured->name = get_the_title();
 			$featured->link = get_the_permalink();
 			$featured->image = get_the_post_thumbnail_url();
@@ -33,9 +35,24 @@ get_header();
 		wp_reset_postdata();
 	endif;
 
+	$prefix = 'article_carousel_';
+	
+	$section->row_index = $post_id;
+	$section->items = array();
+	if( have_rows($prefix.'carousel', 'option') ):
+		while ( have_rows($prefix.'carousel', 'option') ) : the_row();
+			$item = new StdClass;
+			$item->bkgd_img = get_sub_field('background_image');
+			$item->headline = get_sub_field('headline');
+			$item->subheadline = get_sub_field('subheadline');
+			$item->link = get_sub_field('link');
+			array_push($section->items, $item);
+		endwhile;
+	endif;
+
 	if ( have_posts() ) :
 
-		Components\View::render('post', 'listing');
+		Components\View::render('post', 'listing', $section);
 
 	else :
 		
