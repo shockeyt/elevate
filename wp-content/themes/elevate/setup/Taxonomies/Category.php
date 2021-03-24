@@ -4,7 +4,7 @@ namespace Setup\Taxonomies;
 class Category
 {
     /**
-     * Registers Event Post Type
+     * Registers Category Taxonomy
      */
     public static function register()
     {
@@ -23,7 +23,7 @@ class Category
 
         );
 
-        register_taxonomy('event_category',array('event'),array(
+        register_taxonomy('case_study_cat',array('case_study'),array(
             'hierarchical' => true,
             'labels' => $labels,
             'show_admin_column' => true,

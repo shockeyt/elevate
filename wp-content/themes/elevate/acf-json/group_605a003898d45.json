@@ -56,6 +56,30 @@
             "endpoint": 0
         },
         {
+            "key": "field_605acb48e6d25",
+            "label": "Hero Image",
+            "name": "hero_image_case_study",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
             "key": "field_605a01efe913b",
             "label": "Case Study Carousel",
             "name": "case_study_carousel",
@@ -94,5 +118,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1616511494
+    "modified": 1616563038
 }

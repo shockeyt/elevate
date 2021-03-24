@@ -24,7 +24,10 @@ Setup\Menus::init();
 Setup\ACF::init();
 Setup\Helpers::init();
 Setup\Shortcodes::init();
+Setup\Ajax::init();
 
 Setup\PostTypes\CaseStudy::register();
+
+Setup\Taxonomies\Category::register();
 
 Setup\Widgets\RelatedPosts::register();
