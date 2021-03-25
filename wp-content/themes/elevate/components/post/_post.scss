@@ -116,3 +116,119 @@
         }
     }
 }
+
+.post-content{
+    padding: 0 10px;
+    @include lg{
+        padding: 0 85px;
+    }
+}
+.post-container{
+    article{
+        h1,h2,h3,h4,h5,h6{
+            color: $green;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+        h1,h2,h3,h4,h5,h6,p,ol{
+            @include lg{
+                max-width: 83.33333%;
+                margin-left: 8.33333%;
+                padding-right: 18px;
+                padding-left: 18px;
+            }
+            strong{
+                font-family: $bold;
+                font-size: inherit;
+            }
+        }
+        ul{
+            @include lg{
+                max-width: 83.33333%;
+                margin-left: 8.33333%;
+                padding: 0 45px;
+            }
+        }
+        figcaption{
+            font-size: 10px;
+            @include lg{
+                max-width: 83.33333%;
+                margin-left: 8.33333%;
+                padding-right: 18px;
+                padding-left: 18px;
+            }
+        }
+    }
+}
+
+.social-links{
+    a{
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        border: 1px solid $light_green;
+        border-radius: 50%;
+        position: relative;
+        margin-right: 10px;
+        background: $white;
+        transition: background 0.3s;
+        i{
+            @extend .position-center;
+            color: $green;
+            font-size: 16px;
+        }
+        &:hover{
+            background: $light_green;
+        }
+    }
+}
+
+.one-r-post{
+    min-height: 248px;
+    position: relative;
+    &:after{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.5);
+        @include lg{
+            background: rgba(0,0,0,0);
+            transition: background 0.3s;
+        }
+    }
+    .inner-reveal{
+        position: relative;
+        padding: 20px 20px 76px;
+        min-height: 248px;
+        z-index: 1;
+        h6{
+            font-size: 25px;
+            font-family: $semibold;
+        }
+        @include lg{
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .goto{
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            height: 72px;
+            width: 105px;
+            img{
+                @extend .position-center;
+            }
+        }
+    }
+    &:hover{
+        &:after{
+            background: rgba(0,0,0,0.5);
+        }
+        .inner-reveal{
+            opacity: 1;
+        }
+    }
+}

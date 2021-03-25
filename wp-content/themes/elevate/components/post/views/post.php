@@ -5,12 +5,6 @@
 ?>
 <article <?php post_class(); ?> >
 
-	<h1><?php the_title(); ?></h1>
-
-	<?php Components\View::render('post', 'share'); ?>
-
-	<?php the_post_thumbnail(); ?>
-
 	<?php the_content(); ?>
 	
 </article>

@@ -1,0 +1,14 @@
+.breadcrumbs{
+    padding: 0 10px;
+    @include lg{
+        padding: 0 85px;
+    }
+    span{
+        vertical-align: super;
+    }
+    .back-link{
+        @include lg{
+            position: absolute;
+        }
+    }
+}
