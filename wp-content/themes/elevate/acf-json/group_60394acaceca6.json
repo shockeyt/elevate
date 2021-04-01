@@ -294,6 +294,68 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_6065369543a06": {
+                    "key": "layout_6065369543a06",
+                    "name": "content_section",
+                    "label": "Content",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_6065369a43a07",
+                            "label": "Content",
+                            "name": "content_section",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_60653669356d8"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 1
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_606539d088929": {
+                    "key": "layout_606539d088929",
+                    "name": "business_profile",
+                    "label": "Business Profile",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_606539d38892a",
+                            "label": "Business Profile",
+                            "name": "business_profile",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_606538d98fb17"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 1
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "button_label": "Add Row",
@@ -308,6 +370,13 @@
                 "operator": "==",
                 "value": "page"
             }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "case_study"
+            }
         ]
     ],
     "menu_order": 0,
@@ -318,5 +387,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1614796263
+    "modified": 1617246692
 }

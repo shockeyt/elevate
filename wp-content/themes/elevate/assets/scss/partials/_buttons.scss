@@ -36,6 +36,19 @@ $button-disabled-bg:#eee;
 		color: $white;
 	}
 }
+.btn-lightgreen{
+	font-family: $regular;
+	background: $light_green;
+	color: $green;
+	text-transform: uppercase;
+	&:hover{
+		background: $green;
+		color: $white;
+	}
+	@include lg{
+		padding: 9px 50px;
+	}
+}
 
 .btn-outline{
 	display: inline-block;

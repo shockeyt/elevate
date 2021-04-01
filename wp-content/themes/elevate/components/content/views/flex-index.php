@@ -180,12 +180,53 @@
 
         break; 
 
+    case 'business_profile':
+        $prefix = 'business_profile_';
+        $section = new StdClass;
+        $section->row_index = get_row_index();
+        $section->industry = get_sub_field($prefix.'industry');
+        $section->data_l = array();
+        if( have_rows($prefix.'data_connectors_left') ):
+            while ( have_rows($prefix.'data_connectors_left') ) : the_row();
+                $item = new StdClass;
+                $item->title = get_sub_field('title');
+                $item->items_l = array();
+                if( have_rows('items_l') ):
+                    while ( have_rows('items_l') ) : the_row();
+                        $i = get_sub_field('item');
+                        array_push($item->items_l, $i);
+                    endwhile;
+                endif;
+                array_push($section->data_l, $item);
+            endwhile;
+        endif;
+        $section->data_r = array();
+        if( have_rows($prefix.'data_connectors_right') ):
+            while ( have_rows($prefix.'data_connectors_right') ) : the_row();
+                $item = new StdClass;
+                $item->title = get_sub_field('title');
+                $item->items_r = array();
+                if( have_rows('items_r') ):
+                    while ( have_rows('items_r') ) : the_row();
+                        $i = get_sub_field('item');
+                        array_push($item->items_r, $i);
+                    endwhile;
+                endif;
+                array_push($section->data_r, $item);
+            endwhile;
+        endif;
+        $section->img = get_sub_field($prefix.'profile_image');
+        Components\View::render('content', 'business-profile', $section);
+
+        break;     
+
     default:
         // Default is Generic Text wysiwyg
-        // $section = new StdClass;
-        // $section->row_index = get_row_index();
-        // $section->text = get_sub_field('flex_text');
-        // Components\View::render('flex-content', 'wysiwyg', $section);
+        $prefix = 'content_section_';
+        $section = new StdClass;
+        $section->row_index = get_row_index();
+        $section->text = get_sub_field($prefix.'flex_text');
+        Components\View::render('content', 'wysiwyg', $section);
         
         break;
 } ?>

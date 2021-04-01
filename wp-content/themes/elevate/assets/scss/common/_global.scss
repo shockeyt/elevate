@@ -29,6 +29,13 @@ hr{
 			margin: 30px auto;
 		}
 	}
+	&.full-gray{
+		border-top: 1px solid #686868;
+		width: 100%;
+		@include md{
+			margin: 30px auto;
+		}
+	}
 }
 
 a{

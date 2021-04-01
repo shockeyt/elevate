@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12 text-center mb-4 mb-lg-5">
-                <h5 class="regular text-green cap">Related Stories</h5>
+                <h5 class="regular text-green cap">Related Case Studies</h5>
             </div>
             <?php 
             foreach ($DATA as $item) { 
@@ -26,7 +26,7 @@
         </div>
         <div class="row">
             <div class="col-12 text-center mt-5 mt-lg-6">
-                <a href="/articles" class="btn btn-lightgreen">View All</a>
+                <a href="/case-studies" class="btn btn-lightgreen">View All</a>
             </div>
         </div>
     </div>

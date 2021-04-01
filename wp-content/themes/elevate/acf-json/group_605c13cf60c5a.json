@@ -48,6 +48,13 @@
                 "operator": "==",
                 "value": "post"
             }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "case_study"
+            }
         ]
     ],
     "menu_order": 1,
@@ -58,5 +65,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1616647200
+    "modified": 1617245654
 }
