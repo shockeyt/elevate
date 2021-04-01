@@ -4,4 +4,12 @@
         margin-top: 15px;
         margin-bottom: 15px;
     }
+    img.size-full{
+        margin: 15px auto;
+        width: 100%;
+        @include lg{
+            margin: 25px auto;
+            width: 100%;
+        }
+    }
 }

@@ -1,0 +1,8 @@
+.full-image{
+    .bkgd-img{
+        height: 339px;
+        @include md{
+            height: 450px;
+        }
+    }
+}

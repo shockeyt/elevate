@@ -232,6 +232,15 @@
 
         break; 
 
+    case 'full_image':   
+        $prefix = 'full_image_';
+        $section = new StdClass;
+        $section->row_index = get_row_index();
+        $section->img = get_sub_field($prefix.'full_img');
+        Components\View::render('content', 'full-image', $section);
+        
+        break; 
+
     default:
         // Default is Generic Text wysiwyg
         $prefix = 'content_section_';

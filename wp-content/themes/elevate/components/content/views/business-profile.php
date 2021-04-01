@@ -37,7 +37,7 @@
                                 <?php foreach ($DATA->data_r as $item) { ?>
                                     <h6 class="h7 text-green"><?php echo $item->title; ?></h6>
                                     <?php foreach ($item->items_r as $i) { ?>
-                                        <p class="ml-3 mb-2"><?php echo $i; ?></p>
+                                        <p class="ml-3 mb-2 ml-lg-0"><?php echo $i; ?></p>
                                     <?php } ?>
                                 <?php } ?>
                             </div>
