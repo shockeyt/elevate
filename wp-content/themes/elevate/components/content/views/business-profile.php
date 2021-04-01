@@ -11,7 +11,7 @@
     //             $i
     // $DATA->img
 ?>
-<section class="business-profile">
+<section id="flex-section-<?php echo $DATA->row_index; ?>" class="business-profile">
     <div class="container">
         <div class="row">
             <div class="col-12 col-md-6 offset-lg-1 col-lg-7 px-0 pl-md-3">

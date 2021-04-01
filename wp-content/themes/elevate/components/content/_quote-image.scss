@@ -1,0 +1,33 @@
+.quote-image{
+    .quote{
+        h3{
+            @include md{
+                font-size: 36px;
+            }
+            @include lg{
+                font-size: 45px; 
+                width: 80%;
+            }
+        }
+    }
+    .bkgd-img{
+        height: 366px;
+        @include md{
+            height: 100%;
+        }
+        @include lg{
+            width: 425px;
+            position: relative;
+            top: 0;
+            z-index: 1;
+            left: -33.33%;
+            &.offset{
+                top: 35px;
+                //top: -50px; parallax
+            }
+        }
+        @include xl{
+            width: 468px;
+        }
+    }
+}

@@ -218,7 +218,19 @@
         $section->img = get_sub_field($prefix.'profile_image');
         Components\View::render('content', 'business-profile', $section);
 
-        break;     
+        break;    
+    
+    case 'quote_&_image':
+        $prefix = 'quote_&_image_';
+        $section = new StdClass;
+        $section->row_index = get_row_index();
+        $section->quote = get_sub_field($prefix.'quote');
+        $section->q_color = get_sub_field($prefix.'quote_color');
+        $section->img = get_sub_field($prefix.'q_image');
+        $section->offset = get_sub_field($prefix.'offset_image');
+        Components\View::render('content', 'quote-image', $section);
+
+        break; 
 
     default:
         // Default is Generic Text wysiwyg

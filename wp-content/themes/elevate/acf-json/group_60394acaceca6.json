@@ -356,6 +356,37 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_606550080e9be": {
+                    "key": "layout_606550080e9be",
+                    "name": "quote_&_image",
+                    "label": "Quote & Image",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_6065500b0e9bf",
+                            "label": "Quote & Image",
+                            "name": "quote_&_image",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_60654f850f64b"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 1
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "button_label": "Add Row",
@@ -387,5 +418,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1617246692
+    "modified": 1617252380
 }
