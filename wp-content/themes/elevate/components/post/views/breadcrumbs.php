@@ -4,7 +4,7 @@
     //$DATA->date
     //$DATA->cats
 ?>
-<section class="breadcrumbs position-relative py-4 py-lg-5">
+<section class="breadcrumbs <?php echo $DATA->gate; ?> position-relative py-4 py-lg-5">
     <a href="<?php echo $DATA->link; ?>" class="back-link ml-3 mb-3 ml-lg-4"><?php echo $DATA->title; ?></a>
     <div class="container">
         <div class="row">
