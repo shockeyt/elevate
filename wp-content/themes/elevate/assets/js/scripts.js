@@ -13,21 +13,46 @@
 
 	});
 
-    $(document).on('click', 'a[href^="#"]', function (event) {
-        event.preventDefault();
+    $(document).on('click', 'a', function(event) {
+        //console.log('clicking anchor');
+        var link = $.attr(this, 'href');
+        //console.log(link);
+        if (link.indexOf('#') > -1){
+            event.preventDefault();
+            //has hash
+            //console.log('has hash');
+            //console.log(link.split('#')[1]);
+            var hash_id = '#'+link.split('#')[1];
+            //console.log(hash_id);
+            $('html, body').animate({
+                scrollTop: $(''+hash_id+'').offset().top
+            }, 1000);
     
-        $('html, body').animate({
-            scrollTop: $($.attr(this, 'href')).offset().top
-        }, 1000);
-
-        //close mobile menu if menu anchor link
-        if ( $( window ).width() < 992 ) {
-            if ( $(this).parent().hasClass('menu-item') || $(this).parent().hasClass('mobile-menu')) {
-                $('#mobile-menu').toggleClass('open');
-                $('.mobile-menu').fadeToggle();                
-            }
-        }    
+            //close mobile menu if menu anchor link
+            if ( $( window ).width() < 992 ) {
+                if ( $(this).parent().hasClass('menu-item') || $(this).parent().hasClass('mobile-menu')) {
+                    $('#mobile-menu').toggleClass('open');
+                    $('.mobile-menu').fadeToggle();                
+                }
+            }    
+        }
     });
+
+    // $(document).on('click', 'a[href^="#"]', function (event) {
+    //     event.preventDefault();
+    
+    //     $('html, body').animate({
+    //         scrollTop: $($.attr(this, 'href')).offset().top
+    //     }, 1000);
+
+    //     //close mobile menu if menu anchor link
+    //     if ( $( window ).width() < 992 ) {
+    //         if ( $(this).parent().hasClass('menu-item') || $(this).parent().hasClass('mobile-menu')) {
+    //             $('#mobile-menu').toggleClass('open');
+    //             $('.mobile-menu').fadeToggle();                
+    //         }
+    //     }    
+    // });
 
 
 
