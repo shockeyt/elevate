@@ -5,8 +5,17 @@
 
 get_header();
 
-	while ( have_posts() ) : the_post(); ?>
-		<section class="green-bar bg-green py-6 pt-lg-6 pb-lg-7"></section>
+	while ( have_posts() ) : the_post(); 
+
+		if (!empty(get_the_post_thumbnail_url())) {
+			$hero = new StdClass;
+			$hero->title = get_the_title();
+			$hero->img = get_the_post_thumbnail_url();
+			Components\View::render('content', 'hero-posts', $hero);
+		} 
+
+		if(!empty(get_the_content())){ ?>
+		<!-- <section class="green-bar bg-green py-6 pt-lg-6 pb-lg-7"></section> -->
 		<section class="default-page py-6 py-md-7">
 			<div class="container">
 				<div class="row">
@@ -16,8 +25,9 @@ get_header();
 				</div>
 			</div>
 		</section>
-
-	<?php endwhile;
+		<?php }
+	
+	endwhile;
 
 	if( have_rows('flex_components') ) {
 		while ( have_rows('flex_components') ) : the_row();
