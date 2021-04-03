@@ -8,7 +8,7 @@ get_header();
 	$post_id = get_option( 'page_for_posts' );
 	$hero = new StdClass;
 	$hero->title = get_the_title($post_id);
-	$hero->img = get_the_post_thumbnail_url($post_id);
+	$hero->img = get_the_post_thumbnail_url($post_id, 'full');
 	Components\View::render('content', 'hero-posts', $hero);
 
 	Components\View::render('post', 'filter');
