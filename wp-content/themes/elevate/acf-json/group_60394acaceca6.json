@@ -418,6 +418,37 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_6067eb24713ef": {
+                    "key": "layout_6067eb24713ef",
+                    "name": "video",
+                    "label": "Video",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_6067eb29713f0",
+                            "label": "Video",
+                            "name": "video",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_6067eaf29d445"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 1
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "button_label": "Add Row",
@@ -449,5 +480,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1617254727
+    "modified": 1617423162
 }

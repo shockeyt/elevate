@@ -241,6 +241,15 @@
         
         break; 
 
+    case 'video': 
+        $prefix = 'video_';
+        $section = new StdClass;
+        $section->row_index = get_row_index();
+        $section->video = get_sub_field($prefix.'embed_video');
+        Components\View::render('content', 'video', $section);
+        
+        break;   
+
     default:
         // Default is Generic Text wysiwyg
         $prefix = 'content_section_';
