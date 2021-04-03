@@ -60,6 +60,7 @@ get_header();
 			$section->row_index = get_the_ID();
 			$section->title = get_field('embedded_form_title');
 			$section->form = get_field('embedded_form_code');
+			$section->case_study = true;
 			if (!empty($section->form)) {
 				Components\View::render('content', 'form', $section);
 			}

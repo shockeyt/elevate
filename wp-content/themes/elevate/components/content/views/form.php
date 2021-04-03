@@ -7,7 +7,11 @@
     <div class="container">
         <div class="row">
             <div class="anim-right col-12 text-center text-md-left">
+                <?php if (isset($DATA->case_study) && !empty($DATA->case_study)) { ?>
+                <h5 class="text-green"><?php echo $DATA->title; ?></h5>
+                <?php } else { ?>
                 <h1 class="text-green"><?php echo $DATA->title; ?></h1>
+                <?php } ?>
             </div>
             <div class="col-12 mt-5">
                 <?php echo $DATA->form; ?>
