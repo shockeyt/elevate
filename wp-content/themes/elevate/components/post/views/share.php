@@ -3,7 +3,7 @@ $page_title = get_the_title();
 $page_url = get_permalink();
 $excerpt = get_the_excerpt();
 $twitter = "https://twitter.com/home?status=" . urlencode($page_title) . ' ' . urlencode($page_url);
-$facebook = "https://www.facebook.com/sharer/sharer.php?quote=" . urlencode($page_title) . ' ' . urlencode($page_url);
+$facebook = "https://www.facebook.com/sharer/sharer.php?u=" . $page_url;
 $linked_in = "https://www.linkedin.com/shareArticle?mini=true&url=" . urlencode($page_url) . "&title=". urlencode($page_title) . "&summary=" . urlencode($excerpt);
 ?>
 
