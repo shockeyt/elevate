@@ -13,7 +13,7 @@
         position: absolute;
         z-index: 2;
         position: absolute;
-        top: 35%;
+        top: 50%;
         left: 50%;
         transform: translate(-50%,-50%);
         width: 100%;
@@ -78,10 +78,10 @@
 }
 .post-container.gated{
     overflow: hidden;
-    max-height: 80vh;
-    min-height: 60vh;
+    min-height: 100vh;
     @include md{
         max-height: 60vh;
+        min-height: 60vh;
     }
     @include lg{
         max-height: 66vh;
