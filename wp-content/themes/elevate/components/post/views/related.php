@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12 text-center mb-4 mb-lg-5">
-                <h5 class="regular text-green cap">Related Stories</h5>
+                <h5 class="regular text-green cap anim-right">Related Stories</h5>
             </div>
         </div>
         <div class="row justify-content-center">    

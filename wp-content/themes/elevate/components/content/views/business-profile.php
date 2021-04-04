@@ -16,7 +16,7 @@
         <div class="row">
             <div class="col-12 col-md-6 offset-lg-1 col-lg-7 px-0 pl-md-3">
                 <div class="profile bg-light-gray px-3 pl-md-4 pr-md-5 pt-4 pt-md-5 pb-6 pl-lg-5">
-                    <div class="inner-profile">
+                    <div class="inner-profile anim-right">
                         <h6 class="semibold text-green">Business Profile</h6>
                         <h6 class="h7 text-green">Industry:</h6>
                         <p><?php echo $DATA->industry; ?></p>
@@ -47,8 +47,8 @@
                 </div>
             </div>
             <div class="col-12 col-md-6 col-lg-3 px-0 pr-md-3">
-                <div class="img-w-offset-bkgd position-relative pb-5 pb-md-0 h-100">
-                    <div class="bkgd-img mr-3" style="background-image:url(<?php echo $DATA->img['url']; ?>);"></div>
+                <div class="img-w-offset-bkgd position-relative pb-5 pb-md-0 h-100 anim-left">
+                    <div class="bkgd-img mr-3 anim-up" style="background-image:url(<?php echo $DATA->img['url']; ?>);"></div>
                     <div class="offset-bkgd bg-light-green"></div>
                 </div>
             </div>

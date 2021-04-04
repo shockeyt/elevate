@@ -8,7 +8,7 @@
     <div class="bkgd-img" style="background-image:url(<?php echo $DATA->image; ?>);">
         <div class="d-none d-md-block container-fluid">
             <div class="row">
-                <div class="listing-content col-12 col-md-8 col-lg-4 mt-md-5 mb-md-7">
+                <div class="listing-content anim-right anim-load col-12 col-md-8 col-lg-4 mt-md-5 mb-md-7">
                     <a href="<?php echo $DATA->link; ?>">
                         <div class="row">
                             <div class="col-12">

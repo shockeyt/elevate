@@ -11,6 +11,7 @@
 				if (!empty($DATA->items)) {
 					Components\View::render('content', 'carousel-archive', $DATA);
 				}
+				
 			}
 			?>
 			<div class="container">
