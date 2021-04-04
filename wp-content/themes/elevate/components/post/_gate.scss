@@ -78,6 +78,7 @@
 }
 .post-container.gated{
     overflow: hidden;
+    max-height: 100vh;
     min-height: 100vh;
     @include md{
         max-height: 60vh;
