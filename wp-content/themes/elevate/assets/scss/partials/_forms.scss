@@ -87,6 +87,26 @@ select{
 				}
 			}
 		}
+		.ginput_container_consent{
+			input{
+				margin-top: -2px !important;
+    			margin-right: 5px !important;
+				display: inline-block;
+				vertical-align: middle;
+				width: 20px;
+				height: 20px;
+			}
+			label{
+				font-family: $medium;
+        		font-size: 16px !important;
+				color: #fff;
+				display: inline-block;
+				vertical-align: middle;
+				@include lg{
+					font-size: 21px !important;
+				}
+			}
+		}
 		.validation_message{
 			position: absolute;
 			bottom: -4px;
