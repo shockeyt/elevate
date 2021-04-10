@@ -8,9 +8,9 @@
 				
 				?>
 			</div>
-			<div class="col-12 offset-lg-2 col-lg-8 my-5">
-				<?php Components\View::render('post', 'share'); ?>
-			</div>
+			<!-- <div class="col-12 offset-lg-2 col-lg-8 my-5">
+				<?php //Components\View::render('post', 'share'); ?>
+			</div> -->
 		</div>
 	</div>
 </section>

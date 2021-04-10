@@ -36,6 +36,25 @@ get_header();
 
 			Components\View::render('post', 'container' );
 
+			//flex
+			if( have_rows('flex_components') ) {
+				while ( have_rows('flex_components') ) : the_row();
+					Components\View::render('content', 'flex-index');
+				endwhile;
+			};
+
+			?>
+			<div class="post-share">
+				<div class="container">
+					<div class="row">
+						<div class="col-12 offset-lg-2 col-lg-8 my-5">
+							<?php Components\View::render('post', 'share'); ?>
+						</div>
+					</div>
+				</div>
+			</div>
+			<?php
+
 			$section = new StdClass;
 			$section->row_index = get_the_ID();
 			$section->title = get_field('embedded_form_title');
