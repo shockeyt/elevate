@@ -195,7 +195,7 @@
         height: 100%;
         background: rgba(0,0,0,0.5);
         @include lg{
-            background: rgba(0,0,0,0);
+            background: rgba(0,0,0,0.3);
             transition: background 0.3s;
         }
     }
@@ -208,10 +208,7 @@
             font-size: 25px;
             font-family: $semibold;
         }
-        @include lg{
-            opacity: 0;
-            transition: opacity 0.3s;
-        }
+        
         .goto{
             position: absolute;
             bottom: 0;
@@ -221,6 +218,10 @@
             img{
                 @extend .position-center;
             }
+            @include lg{
+                opacity: 0;
+                transition: opacity 0.3s;
+            }
         }
     }
     &:hover{
@@ -228,7 +229,11 @@
             background: rgba(0,0,0,0.5);
         }
         .inner-reveal{
-            opacity: 1;
+            @include lg{
+                .goto{
+                    opacity: 1;
+                }
+            }
         }
     }
 }
