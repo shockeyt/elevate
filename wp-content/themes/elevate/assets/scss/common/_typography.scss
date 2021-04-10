@@ -37,7 +37,7 @@ h1{
     letter-spacing: 2px;
     line-height: 1.1;
     @include md{
-        font-size: 55px;
+        font-size: 50px;
         line-height: 1.16;
     }
 }
@@ -47,7 +47,7 @@ h2{
     letter-spacing: 1.5px;
     line-height: 1.36;
     @include md{
-        font-size: 50px;
+        font-size: 47px;
     }
 }
 h3{
@@ -56,7 +56,7 @@ h3{
     letter-spacing: 3px;
     line-height: 1.13;
     @include md{
-        font-size: 45px;
+        font-size: 43px;
         line-height: 1.5;
     }
 }
@@ -75,7 +75,7 @@ h5{
     letter-spacing: 1.5px;
     line-height: 1.2;
     @include md{
-        font-size: 34px;
+        font-size: 30px;
     }
 }
 h6{ 
