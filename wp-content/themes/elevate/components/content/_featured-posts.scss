@@ -20,8 +20,8 @@
                 align-items: center;
             }
             @include lg{
-                opacity: 0;
-                transition: opacity 0.3s ease-in-out;
+                background: rgba(#9FD0BB, 0.8);
+                transition: background 0.3s ease-in-out;
             }
             h5{
                 font-size: 20px;
@@ -33,7 +33,7 @@
         @include lg{
             &:hover{
                 .title-area{
-                    opacity: 1;
+                    background: rgba(#9FD0BB, 1);
                 }
             }
         }
