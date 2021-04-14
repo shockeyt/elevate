@@ -107,6 +107,13 @@ select{
 				}
 			}
 		}
+		&.text-green{
+			.ginput_container_consent{
+				label{
+					color: $green;
+				}
+			}
+		}
 		.validation_message{
 			position: absolute;
 			bottom: -4px;
